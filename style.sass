@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Roboto', sans-serif
+  scroll-behavior: smooth
+
+body
+  background: #111
+
+section
+  position: relative
+  padding: 100px
+
+.header
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10000
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding-top: 20px
+  padding-bottom: 20px
+
+  .logo
+    color: #fff
+    text-decoration: none
+    font-weight: 700
+    font-size: 1.2em
+    letter-spacing: 1px
+
+  .toggle img
+    max-width: 40px
+    cursor: pointer
+
+.fst, .trd
+  position: relative
+  width: 100%
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.fst:before, .trd:before
+  content: ''
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 400px
+  z-index: 1
+  background: linear-gradient(to top, #111, transparent)
+
+.fst .content
+  position: relative
+  max-width: 900px
+  text-align: center
+  z-index: 1
+
+  h2
+    color: #fff
+    font-size: 5em
+    font-weight: 900
+
+  p
+    color: #fff
+    font-size: 1.2em
+    line-height: 1.6
+
+.button
+  position: relative
+  display: inline-block
+  margin-top: 30px
+  padding: 15px 40px
+  border: solid 1px #fff
+  color: #fff
+  text-decoration: none
+  font-size: 1.2em
+  line-height: 1.5
+  text-transform: uppercase
+
+  &:hover
+    background: #fff
+    color: #111
+    transition: 0.8s
+
+.fitBg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
+  opacity: 0.8
+
+.abt
+  position: relative
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .content-box
+    min-width: 50%
+    width: 50%
+    padding-right: 45px
+    text-align: end
+
+.title--box
+  font-weight: 700
+  color: #fff
+  font-size: 2em
+  margin-bottom: 15px
+
+.text--box
+  color: #fff
+  font-size: 1.2em
+  line-height: 1.5
+
+.abt .img--box
+  position: relative
+  min-width: 50%
+  width: 50%
+  min-height: 500px
+
+.scd
+  position: relative
+  width: 100%
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &:before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 400px
+    z-index: 1
+    background: linear-gradient(to top, #111, transparent)
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 400px
+    z-index: 1
+    background: linear-gradient(to bottom, #111, transparent)
+
+.trd:after
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 400px
+  z-index: 1
+  background: linear-gradient(to bottom, #111, transparent)
+
+.dest
+  text-align: center
+
+  .content--dest
+    text-align: center
+    color: #fff
+
+    h2
+      color: #fff
+      font-weight: 900
+      line-height: 1.2em
+
+  .dest--list
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    margin-top: 50px
+
+    .dest--box
+      position: relative
+      min-width: 350px
+      height: 480px
+      background: #191919
+      transition: 0.5s
+      margin: 10px
+
+    &:hover .dest--box
+      opacity: 0.2
+
+    .dest--box
+      &:hover
+        opacity: 1
+
+      .img--list
+        position: relative
+        width: 100%
+        height: 400px
+
+      .content--list
+        width: 100%
+        height: 80px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        h2
+          color: #fff
+          font-weight: 500
+          line-height: 1.2em
+
+          span
+            font-size: 0.8em
+            font-weight: 300
+            opacity: 0.5
+
+.footer
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  .social
+    display: flex
+
+    li
+      list-style: none
+
+      a
+        text-decoration: none
+        margin: 0 20px
+
+        img
+          filter: invert(1)
+          max-width: 40px
+
+.copy
+  margin-top: 20px
+  font-size: 18px
+  font-weight: 300
+  color: #777
+
+  a
+    color: #fff
+    text-decoration: none
+
+@media (max-width: 767px)
+  section
+    padding: 40px
+
+  .fst .content
+    h2
+      font-size: 2.5em
+
+    p
+      font-size: 1em
+
+  .abt
+    flex-direction: column
+
+    .content-box
+      min-width: 100%
+      width: 100%
+      padding-right: 0px
+      text-align: center
+
+    .img--box
+      min-width: 100%
+      width: 100%
+      padding-right: 0px
+      text-align: center
+      min-height: 250px
+
+  .button
+    margin-bottom: 40px
+
+  .dest .dest--list .dest--box
+    position: relative
+    max-width: 350px
+    min-width: initial
+    width: 350px
+    height: 400px
+
+    .img--list
+      height: 320px
+
+  .footer .social li a img
+    max-width: 30px
